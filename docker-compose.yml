@@ -1,0 +1,13 @@
+version: "3"
+services:
+    api:
+        build: api-node/
+        ports:
+         - "9090"
+    gui:
+        build: nginx-proxy/
+        ports:
+         - 80:80
+           #        links:
+           # - api:apiserver
+
